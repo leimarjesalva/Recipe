@@ -1,0 +1,133 @@
+/* Global styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Fallback color */
+}
+
+/* Container styling */
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 380px;
+    max-height: 80vh;
+    border-radius: 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Hidden state for the container */
+.container.hidden {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+/* Recipe container styling */
+#recipeContainer {
+    margin-top: 20px;
+    text-align: left;
+    display: none;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    overflow-y: auto;
+    max-height: 60vh;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Recipe title styling */
+#recipeTitle {
+    font-size: 24px;
+    font-weight: bold;
+    word-break: break-word;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Button container */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Button styling */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 16px;
+    min-width: 150px;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Button active effect */
+button:active {
+    transform: scale(0.98);
+}
+
+/* Button focus effect */
+button:focus {
+    outline: 2px solid #4CAF50;
+    outline-offset: 4px;
+}
+
+/* List styling */
+ul, ol {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    color: #555;
+    text-align: left;
+    margin-left: 20px;
+}
+
+/* Select dropdown styling */
+select {
+    padding: 8px;
+    font-size: 16px;
+    margin: 10px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+}

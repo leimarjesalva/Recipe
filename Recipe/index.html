@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Recipe Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Random Recipe Generator</h1>
+
+        <div>
+            <label for="categoryFilter">Choose a Category:</label>
+            <select id="categoryFilter">
+                <option value="All">All</option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+                <option value="Side-dish">Side-dish</option>
+                <option value="Dessert">Dessert</option>
+                <option value="Snack">Snack</option>
+            </select>
+        </div>
+
+        <!-- Button Container for Recipe Generation -->
+        <div class="button-container">
+            <button id="generateRecipeBtn">Get Recipe</button>
+            <button id="surpriseMeBtn">Surprise Me</button>
+        </div>
+
+        <div id="recipeContainer" style="display: none;">
+            <h2 id="recipeTitle">Click the button to get a recipe!</h2>
+            <p><strong>Category:</strong> <span id="recipeCategory"></span></p>
+            <p><strong>Ingredients:</strong></p>
+            <ul id="ingredientsList"></ul>
+            <p><strong>Steps:</strong></p>
+            <ol id="stepsList"></ol>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
